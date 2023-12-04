@@ -12,7 +12,7 @@ export const SocketIndicator = () => {
         variant="outline" 
         className="bg-yellow-600 text-white border-none"
       >
-        Fallback: Polling every 1s
+        Fallback: negociando a cada 1s
       </Badge>
     )
   }
@@ -22,7 +22,7 @@ export const SocketIndicator = () => {
       variant="outline" 
       className="bg-emerald-600 text-white border-none"
     >
-      Live: Real-time updates
+      Ao vivo: Em tempo real
     </Badge>
   )
 }
