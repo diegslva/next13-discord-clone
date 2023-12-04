@@ -22,7 +22,7 @@ export async function POST(
       return new NextResponse("ID do servidor ausente", { status: 400 });
     }
 
-    if (name === "general") {
+    if (name === "geral") {
       return new NextResponse("O nome não pode ser 'geral'", { status: 400 });
     }
 

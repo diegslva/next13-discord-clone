@@ -39,7 +39,7 @@ const formSchema = z.object({
   name: z.string().min(1, {
     message: "O nome do canal é obrigatório."
   }).refine(
-    name => name !== "general",
+    name => name !== "geral",
     {
       message: "O nome do canal não pode ser 'geral'"
     }

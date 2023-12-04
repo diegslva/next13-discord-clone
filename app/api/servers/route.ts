@@ -22,7 +22,7 @@ export async function POST(req: Request) {
         inviteCode: uuidv4(),
         channels: {
           create: [
-            { name: "general", profileId: profile.id }
+            { name: "geral", profileId: profile.id }
           ]
         },
         members: {

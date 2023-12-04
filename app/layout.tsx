@@ -13,7 +13,7 @@ import { QueryProvider } from '@/components/providers/query-provider'
 const font = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Gaboo - Chat',
+  title: 'Gaboo v1 - Chat',
   description: 'Muito mais do que conversa',
 }
 

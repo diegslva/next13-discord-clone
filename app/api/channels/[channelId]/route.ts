@@ -43,7 +43,7 @@ export async function DELETE(
           delete: {
             id: params.channelId,
             name: {
-              not: "general",
+              not: "geral",
             }
           }
         }
@@ -80,7 +80,7 @@ export async function PATCH(
       return new NextResponse("ID do canal ausente", { status: 400 });
     }
 
-    if (name === "general") {
+    if (name === "geral") {
       return new NextResponse("O nome não pode ser 'geral'", { status: 400 });
     }
 
@@ -102,7 +102,7 @@ export async function PATCH(
             where: {
               id: params.channelId,
               NOT: {
-                name: "general",
+                name: "geral",
               },
             },
             data: {
