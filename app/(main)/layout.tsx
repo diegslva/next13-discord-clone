@@ -6,7 +6,7 @@ const MainLayout = async ({
   children: React.ReactNode;
 }) => {
   return ( 
-    <div className=" h-full w-full isolate overflow-hidden bg-gray-900">
+    <div className=" h-full w-full">
       <div className="hidden md:flex h-full w-[72px] z-30 flex-col fixed inset-y-0">
         <NavigationSidebar />
       </div>
