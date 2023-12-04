@@ -46,7 +46,7 @@ export const DeleteMessageModal = () => {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Delete Message
+          Apagar mensagem
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
           Você tem certeza de que quer fazer isso? <br />

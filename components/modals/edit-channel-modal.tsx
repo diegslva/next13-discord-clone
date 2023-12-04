@@ -99,7 +99,7 @@ export const EditChannelModal = () => {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Edit Channel
+          Editar canal
           </DialogTitle>
         </DialogHeader>
         <Form {...form}>
@@ -113,13 +113,13 @@ export const EditChannelModal = () => {
                     <FormLabel
                       className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70"
                     >
-                      Channel name
+                      Nome do canal
                     </FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
                         className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                        placeholder="Enter channel name"
+                        placeholder="Digite o nome do canal"
                         {...field}
                       />
                     </FormControl>
@@ -132,7 +132,7 @@ export const EditChannelModal = () => {
                 name="type"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Channel Type</FormLabel>
+                    <FormLabel>Tipo de canal</FormLabel>
                     <Select
                       disabled={isLoading}
                       onValueChange={field.onChange}
@@ -142,7 +142,7 @@ export const EditChannelModal = () => {
                         <SelectTrigger
                           className="bg-zinc-300/50 border-0 focus:ring-0 text-black ring-offset-0 focus:ring-offset-0 capitalize outline-none"
                         >
-                          <SelectValue placeholder="Select a channel type" />
+                          <SelectValue placeholder="Selecione um tipo de canal" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>

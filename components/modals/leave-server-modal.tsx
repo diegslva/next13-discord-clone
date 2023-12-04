@@ -45,7 +45,7 @@ export const LeaveServerModal = () => {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Leave Server
+          Sair do servidor
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
           Você tem certeza de que quer sair de <span className="font-semibold text-indigo-500">{server?.name}</span>?

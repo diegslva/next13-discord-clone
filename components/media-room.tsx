@@ -44,7 +44,7 @@ export const MediaRoom = ({
           className="h-7 w-7 text-zinc-500 animate-spin my-4"
         />
         <p className="text-xs text-zinc-500 dark:text-zinc-400">
-          Loading...
+        Carregando...
         </p>
       </div>
     )
@@ -54,6 +54,7 @@ export const MediaRoom = ({
     <LiveKitRoom
       data-lk-theme="default"
       serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_URL}
+      
       token={token}
       connect={true}
       video={video}
