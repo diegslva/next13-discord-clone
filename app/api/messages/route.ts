@@ -17,11 +17,11 @@ export async function GET(
     const channelId = searchParams.get("channelId");
 
     if (!profile) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Não autorizado", { status: 401 });
     }
   
     if (!channelId) {
-      return new NextResponse("Channel ID missing", { status: 400 });
+      return new NextResponse("ID do canal ausente", { status: 400 });
     }
 
     let messages: Message[] = [];
@@ -78,6 +78,6 @@ export async function GET(
     });
   } catch (error) {
     console.log("[MESSAGES_GET]", error);
-    return new NextResponse("Internal Error", { status: 500 });
+    return new NextResponse("Erro interno", { status: 500 });
   }
 }

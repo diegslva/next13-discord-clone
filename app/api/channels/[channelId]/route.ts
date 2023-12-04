@@ -15,7 +15,7 @@ export async function DELETE(
     const serverId = searchParams.get("serverId");
 
     if (!profile) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Não autorizado", { status: 401 });
     }
 
     if (!serverId) {
@@ -23,7 +23,7 @@ export async function DELETE(
     }
 
     if (!params.channelId) {
-      return new NextResponse("Channel ID missing", { status: 400 });
+      return new NextResponse("ID do canal ausente", { status: 400 });
     }
 
     const server = await db.server.update({
@@ -53,7 +53,7 @@ export async function DELETE(
     return NextResponse.json(server);
   } catch (error) {
     console.log("[CHANNEL_ID_DELETE]", error);
-    return new NextResponse("Internal Error", { status: 500 });
+    return new NextResponse("Erro interno", { status: 500 });
   }
 }
 
@@ -69,19 +69,19 @@ export async function PATCH(
     const serverId = searchParams.get("serverId");
 
     if (!profile) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Não autorizado", { status: 401 });
     }
 
     if (!serverId) {
-      return new NextResponse("Server ID missing", { status: 400 });
+      return new NextResponse("ID do servidor ausente", { status: 400 });
     }
 
     if (!params.channelId) {
-      return new NextResponse("Channel ID missing", { status: 400 });
+      return new NextResponse("ID do canal ausente", { status: 400 });
     }
 
     if (name === "general") {
-      return new NextResponse("Name cannot be 'general'", { status: 400 });
+      return new NextResponse("O nome não pode ser 'geral'", { status: 400 });
     }
 
     const server = await db.server.update({
@@ -117,6 +117,6 @@ export async function PATCH(
     return NextResponse.json(server);
   } catch (error) {
     console.log("[CHANNEL_ID_PATCH]", error);
-    return new NextResponse("Internal Error", { status: 500 });
+    return new NextResponse("Erro interno", { status: 500 });
   }
 }

@@ -17,11 +17,11 @@ export async function GET(
     const conversationId = searchParams.get("conversationId");
 
     if (!profile) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Não autorizado", { status: 401 });
     }
   
     if (!conversationId) {
-      return new NextResponse("Conversation ID missing", { status: 400 });
+      return new NextResponse("ID da conversa ausente", { status: 400 });
     }
 
     let messages: DirectMessage[] = [];
@@ -78,6 +78,6 @@ export async function GET(
     });
   } catch (error) {
     console.log("[DIRECT_MESSAGES_GET]", error);
-    return new NextResponse("Internal Error", { status: 500 });
+    return new NextResponse("Erro interno", { status: 500 });
   }
 }

@@ -81,7 +81,7 @@ export const ServerSidebar = async ({
           <ServerSearch
             data={[
               {
-                label: "Text Channels",
+                label: "Canais de texto",
                 type: "channel",
                 data: textChannels?.map((channel) => ({
                   id: channel.id,
@@ -90,7 +90,7 @@ export const ServerSidebar = async ({
                 }))
               },
               {
-                label: "Voice Channels",
+                label: "Canais de voz",
                 type: "channel",
                 data: audioChannels?.map((channel) => ({
                   id: channel.id,
@@ -108,7 +108,7 @@ export const ServerSidebar = async ({
                 }))
               },
               {
-                label: "Members",
+                label: "Membros",
                 type: "member",
                 data: members?.map((member) => ({
                   id: member.id,

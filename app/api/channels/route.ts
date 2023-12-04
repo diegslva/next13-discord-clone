@@ -15,15 +15,15 @@ export async function POST(
     const serverId = searchParams.get("serverId");
 
     if (!profile) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Não autorizado", { status: 401 });
     }
 
     if (!serverId) {
-      return new NextResponse("Server ID missing", { status: 400 });
+      return new NextResponse("ID do servidor ausente", { status: 400 });
     }
 
     if (name === "general") {
-      return new NextResponse("Name cannot be 'general'", { status: 400 });
+      return new NextResponse("O nome não pode ser 'geral'", { status: 400 });
     }
 
     const server = await db.server.update({
@@ -52,6 +52,6 @@ export async function POST(
     return NextResponse.json(server);
   } catch (error) {
     console.log("CHANNELS_POST", error);
-    return new NextResponse("Internal Error", { status: 500 });
+    return new NextResponse("Erro interno", { status: 500 });
   }
 }
