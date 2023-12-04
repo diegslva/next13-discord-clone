@@ -37,11 +37,11 @@ import { useEffect } from "react";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Channel name is required."
+    message: "Canal é obrigatório."
   }).refine(
     name => name !== "general",
     {
-      message: "Channel name cannot be 'general'"
+      message: "O nome do canal não pode ser 'geral'"
     }
   ),
   type: z.nativeEnum(ChannelType)

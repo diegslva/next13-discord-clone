@@ -10,7 +10,7 @@ export default async function handler(
   res: NextApiResponseServerIo,
 ) {
   if (req.method !== "DELETE" && req.method !== "PATCH") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: "Método não permitido" });
   }
 
   try {
@@ -19,15 +19,15 @@ export default async function handler(
     const { content } = req.body;
 
     if (!profile) {
-      return res.status(401).json({ error: "Unauthorized" });
+      return res.status(401).json({ error: "Não autorizado" });
     }
 
     if (!serverId) {
-      return res.status(400).json({ error: "Server ID missing" });
+      return res.status(400).json({ error: "ID do servidor ausente" });
     }
 
     if (!channelId) {
-      return res.status(400).json({ error: "Channel ID missing" });
+      return res.status(400).json({ error: "ID do canal ausente" });
     }
 
     const server = await db.server.findFirst({
