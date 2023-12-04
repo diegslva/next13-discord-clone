@@ -13,8 +13,8 @@ import { QueryProvider } from '@/components/providers/query-provider'
 const font = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Gaboo v1 - Chat',
-  description: 'Muito mais do que conversa',
+  title: 'Gaboo - Sua rede social de conversas',
+  description: 'Criptografia com segurança e privacidade para você e seus amigos.',
 }
 
 export default function RootLayout({
