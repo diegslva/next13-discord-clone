@@ -4,6 +4,7 @@ import { Smile } from "lucide-react";
 import Picker from "@emoji-mart/react";
 import data from "@emoji-mart/data";
 import { useTheme } from "next-themes";
+import i18n from '@emoji-mart/data/i18n/pt.json'
 
 import {
   Popover,
@@ -33,9 +34,10 @@ export const EmojiPicker = ({
         className="bg-transparent border-none shadow-none drop-shadow-none mb-16"
       >
         <Picker
+          i18n={i18n}
           theme={resolvedTheme}
           data={data}
-          onEmojiSelect={(emoji: any) => onChange(emoji.native)}
+          //onEmojiSelect={(emoji: any) => onChange(emoji.native)}
         />
       </PopoverContent>
     </Popover>
