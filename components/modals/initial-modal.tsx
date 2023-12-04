@@ -29,10 +29,10 @@ import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Server name is required."
+    message: "O nome do servidor é obrigatório."
   }),
   imageUrl: z.string().min(1, {
-    message: "Server image is required."
+    message: "A imagem do servidor é obrigatória."
   })
 });
 
@@ -79,7 +79,7 @@ export const InitialModal = () => {
             Customize your server
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Give your server a personality with a name and an image. You can always change it later.
+          Dê ao seu servidor uma personalidade com um nome e uma imagem. Você sempre pode alterá-lo mais tarde.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -111,7 +111,7 @@ export const InitialModal = () => {
                     <FormLabel
                       className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70"
                     >
-                      Server name
+                      Nome do servidor
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -128,7 +128,7 @@ export const InitialModal = () => {
             </div>
             <DialogFooter className="bg-gray-100 px-6 py-4">
               <Button variant="primary" disabled={isLoading}>
-                Create
+                Criar
               </Button>
             </DialogFooter>
           </form>

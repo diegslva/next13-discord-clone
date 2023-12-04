@@ -37,11 +37,11 @@ import { useEffect } from "react";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Channel name is required."
+    message: "O nome do canal é obrigatório."
   }).refine(
     name => name !== "general",
     {
-      message: "Channel name cannot be 'general'"
+      message: "O nome do canal não pode ser 'geral'"
     }
   ),
   type: z.nativeEnum(ChannelType)
@@ -164,7 +164,7 @@ export const EditChannelModal = () => {
             </div>
             <DialogFooter className="bg-gray-100 px-6 py-4">
               <Button variant="primary" disabled={isLoading}>
-                Save
+                Salvar
               </Button>
             </DialogFooter>
           </form>

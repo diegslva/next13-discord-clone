@@ -81,7 +81,7 @@ export default async function handler(
     })
 
     if (!directMessage || directMessage.deleted) {
-      return res.status(404).json({ error: "Message not found" });
+      return res.status(404).json({ error: "Mensagem não encontrada" });
     }
 
     const isMessageOwner = directMessage.memberId === member.id;
@@ -90,7 +90,7 @@ export default async function handler(
     const canModify = isMessageOwner || isAdmin || isModerator;
 
     if (!canModify) {
-      return res.status(401).json({ error: "Unauthorized" });
+      return res.status(401).json({ error: "Não autorizado" });
     }
 
     if (req.method === "DELETE") {
@@ -100,7 +100,7 @@ export default async function handler(
         },
         data: {
           fileUrl: null,
-          content: "This message has been deleted.",
+          content: "Esta mensagem foi excluída.",
           deleted: true,
         },
         include: {
@@ -115,7 +115,7 @@ export default async function handler(
 
     if (req.method === "PATCH") {
       if (!isMessageOwner) {
-        return res.status(401).json({ error: "Unauthorized" });
+        return res.status(401).json({ error: "Não autorizado" });
       }
 
       directMessage = await db.directMessage.update({
@@ -142,6 +142,6 @@ export default async function handler(
     return res.status(200).json(directMessage);
   } catch (error) {
     console.log("[MESSAGE_ID]", error);
-    return res.status(500).json({ error: "Internal Error" });
+    return res.status(500).json({ error: "Erro interno" });
   }
 }

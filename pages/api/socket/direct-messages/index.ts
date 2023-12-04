@@ -9,7 +9,7 @@ export default async function handler(
   res: NextApiResponseServerIo,
 ) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: "Método não permitido" });
   }
 
   try {
@@ -18,15 +18,15 @@ export default async function handler(
     const { conversationId } = req.query;
     
     if (!profile) {
-      return res.status(401).json({ error: "Unauthorized" });
+      return res.status(401).json({ error: "Não autorizado" });
     }    
   
     if (!conversationId) {
-      return res.status(400).json({ error: "Conversation ID missing" });
+      return res.status(400).json({ error: "ID da conversa ausente" });
     }
           
     if (!content) {
-      return res.status(400).json({ error: "Content missing" });
+      return res.status(400).json({ error: "Conteúdo ausente" });
     }
 
 
@@ -61,13 +61,13 @@ export default async function handler(
     })
 
     if (!conversation) {
-      return res.status(404).json({ message: "Conversation not found" });
+      return res.status(404).json({ message: "Conversa não encontrada" });
     }
 
     const member = conversation.memberOne.profileId === profile.id ? conversation.memberOne : conversation.memberTwo
 
     if (!member) {
-      return res.status(404).json({ message: "Member not found" });
+      return res.status(404).json({ message: "Membro não encontrado" });
     }
 
     const message = await db.directMessage.create({
@@ -93,6 +93,6 @@ export default async function handler(
     return res.status(200).json(message);
   } catch (error) {
     console.log("[DIRECT_MESSAGES_POST]", error);
-    return res.status(500).json({ message: "Internal Error" }); 
+    return res.status(500).json({ message: "Erro interno" }); 
   }
 }

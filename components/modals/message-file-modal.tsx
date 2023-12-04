@@ -27,7 +27,7 @@ import { useModal } from "@/hooks/use-modal-store";
 
 const formSchema = z.object({
   fileUrl: z.string().min(1, {
-    message: "Attachment is required."
+    message: "O anexo é obrigatório."
   })
 });
 
@@ -77,10 +77,10 @@ export const MessageFileModal = () => {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Add an attachment
+          Adicionar um anexo
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Send a file as a message
+          Enviar um arquivo como mensagem
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -106,7 +106,7 @@ export const MessageFileModal = () => {
             </div>
             <DialogFooter className="bg-gray-100 px-6 py-4">
               <Button variant="primary" disabled={isLoading}>
-                Send
+              Enviar
               </Button>
             </DialogFooter>
           </form>

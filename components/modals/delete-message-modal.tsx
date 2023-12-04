@@ -49,8 +49,8 @@ export const DeleteMessageModal = () => {
             Delete Message
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Are you sure you want to do this? <br />
-            The message will be permanently deleted.
+          Você tem certeza de que quer fazer isso? <br />
+          A mensagem será excluída permanentemente.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="bg-gray-100 px-6 py-4">
@@ -60,14 +60,14 @@ export const DeleteMessageModal = () => {
               onClick={onClose}
               variant="ghost"
             >
-              Cancel
+              Cancelar
             </Button>
             <Button
               disabled={isLoading}
               variant="primary"
               onClick={onClick}
             >
-              Confirm
+              Confirmar
             </Button>
           </div>
         </DialogFooter>

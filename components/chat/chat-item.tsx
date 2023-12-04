@@ -212,11 +212,11 @@ export const ChatItem = ({
                     )}
                   />
                   <Button disabled={isLoading} size="sm" variant="primary">
-                    Save
+                    Salvar
                   </Button>
               </form>
               <span className="text-[10px] mt-1 text-zinc-400">
-                Press escape to cancel, enter to save
+              Pressione Escape para cancelar, Enter para salvar
               </span>
             </Form>
           )}
@@ -225,14 +225,14 @@ export const ChatItem = ({
       {canDeleteMessage && (
         <div className="hidden group-hover:flex items-center gap-x-2 absolute p-1 -top-2 right-5 bg-white dark:bg-zinc-800 border rounded-sm">
           {canEditMessage && (
-            <ActionTooltip label="Edit">
+            <ActionTooltip label="Editar">
               <Edit
                 onClick={() => setIsEditing(true)}
                 className="cursor-pointer ml-auto w-4 h-4 text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition"
               />
             </ActionTooltip>
           )}
-          <ActionTooltip label="Delete">
+          <ActionTooltip label="Deletar">
             <Trash
               onClick={() => onOpen("deleteMessage", { 
                 apiUrl: `${socketUrl}/${id}`,
