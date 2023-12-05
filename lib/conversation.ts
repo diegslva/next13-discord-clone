@@ -30,7 +30,8 @@ const findConversation = async (memberOneId: string, memberTwoId: string) => {
             profile: true,
           }
         }
-      }
+      },
+      cacheStrategy: { ttl: 60 }
     });
   } catch {
     return null;

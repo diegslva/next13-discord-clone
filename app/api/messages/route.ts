@@ -45,7 +45,8 @@ export async function GET(
         },
         orderBy: {
           createdAt: "desc",
-        }
+        },
+        cacheStrategy: { ttl: 60 }
       })
     } else {
       messages = await db.message.findMany({
@@ -62,7 +63,8 @@ export async function GET(
         },
         orderBy: {
           createdAt: "desc",
-        }
+        },
+        cacheStrategy: { ttl: 60 }
       });
     }
 

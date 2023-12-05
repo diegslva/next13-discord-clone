@@ -37,7 +37,8 @@ const ServerIdPage = async ({
           createdAt: "asc"
         }
       }
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   })
 
   const initialChannel = server?.channels[0];

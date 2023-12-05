@@ -26,7 +26,8 @@ const ServerIdLayout = async ({
           profileId: profile.id
         }
       }
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   if (!server) {

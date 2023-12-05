@@ -24,7 +24,8 @@ export const NavigationSidebar = async () => {
           profileId: profile.id
         }
       }
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   return (

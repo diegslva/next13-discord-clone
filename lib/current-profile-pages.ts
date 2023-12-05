@@ -13,7 +13,8 @@ export const currentProfilePages = async (req: NextApiRequest) => {
   const profile = await db.profile.findUnique({
     where: {
       userId
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   return profile;

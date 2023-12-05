@@ -41,7 +41,8 @@ export default async function handler(
       },
       include: {
         members: true,
-      }
+      },
+      cacheStrategy: { ttl: 60 }
     })
 
     if (!server) {
@@ -53,13 +54,14 @@ export default async function handler(
         id: channelId as string,
         serverId: serverId as string,
       },
+      cacheStrategy: { ttl: 60 }
     });
   
     if (!channel) {
       return res.status(404).json({ error: "Canal não encontrado" });
     }
 
-    const member = server.members.find((member) => member.profileId === profile.id);
+    const member = server.members.find((member: any) => member.profileId === profile.id);
 
     if (!member) {
       return res.status(404).json({ error: "Membro não encontrado" });
@@ -76,7 +78,8 @@ export default async function handler(
             profile: true,
           }
         }
-      }
+      },
+      cacheStrategy: { ttl: 60 }
     })
 
     if (!message || message.deleted) {

@@ -12,7 +12,8 @@ export const initialProfile = async () => {
   const profile = await db.profile.findUnique({
     where: {
       userId: user.id
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   if (profile) {

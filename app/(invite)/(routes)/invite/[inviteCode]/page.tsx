@@ -31,7 +31,8 @@ const InviteCodePage = async ({
           profileId: profile.id
         }
       }
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   if (existingServer) {
@@ -50,7 +51,8 @@ const InviteCodePage = async ({
           }
         ]
       }
-    }
+    },
+    
   });
 
   if (server) {
