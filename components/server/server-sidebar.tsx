@@ -57,13 +57,13 @@ export const ServerSidebar = async ({
         }
       }
     },
-    cacheStrategy: { ttl: 60 }
+    
   });
 
   const textChannels = server?.channels.filter((channel: any) => channel.type === ChannelType.TEXT)
   const audioChannels = server?.channels.filter((channel: any) => channel.type === ChannelType.AUDIO)
   const videoChannels = server?.channels.filter((channel: any) => channel.type === ChannelType.VIDEO)
-  const members = server?.members.filter((member: any) => member.profileId !== profile.id)
+  const members = server?.members.filter((member) => member.profileId !== profile.id)
 
   if (!server) {
     return redirect("/");

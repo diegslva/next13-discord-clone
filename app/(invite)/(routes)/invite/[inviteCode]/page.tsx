@@ -32,7 +32,7 @@ const InviteCodePage = async ({
         }
       }
     },
-    cacheStrategy: { ttl: 60 }
+    
   });
 
   if (existingServer) {

@@ -42,7 +42,7 @@ export default async function handler(
       include: {
         members: true,
       },
-      cacheStrategy: { ttl: 60 }
+     
     })
 
     if (!server) {
@@ -54,7 +54,7 @@ export default async function handler(
         id: channelId as string,
         serverId: serverId as string,
       },
-      cacheStrategy: { ttl: 60 }
+      
     });
   
     if (!channel) {
@@ -79,7 +79,7 @@ export default async function handler(
           }
         }
       },
-      cacheStrategy: { ttl: 60 }
+    
     })
 
     if (!message || message.deleted) {

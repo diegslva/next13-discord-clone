@@ -15,7 +15,7 @@ const SetupPage = async () => {
         }
       }
     },
-    cacheStrategy: { ttl: 60 }
+   
   });
 
   if (server) {

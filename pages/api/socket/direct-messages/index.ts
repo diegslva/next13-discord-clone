@@ -58,7 +58,7 @@ export default async function handler(
           }
         }
       },
-      cacheStrategy: { ttl: 60 }
+      
     })
 
     if (!conversation) {

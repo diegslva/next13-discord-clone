@@ -29,7 +29,7 @@ const ChannelIdPage = async ({
     where: {
       id: params.channelId,
     },
-    cacheStrategy: { ttl: 60 }
+   
   });
 
   const member = await db.member.findFirst({
@@ -37,7 +37,7 @@ const ChannelIdPage = async ({
       serverId: params.serverId,
       profileId: profile.id,
     },
-    cacheStrategy: { ttl: 60 }
+   
     
   });
 

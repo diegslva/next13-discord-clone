@@ -13,7 +13,7 @@ export const initialProfile = async () => {
     where: {
       userId: user.id
     },
-    cacheStrategy: { ttl: 60 }
+    
   });
 
   if (profile) {

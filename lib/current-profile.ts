@@ -13,7 +13,7 @@ export const currentProfile = async () => {
     where: {
       userId
     },
-    cacheStrategy: { ttl: 60 }
+    
   });
 
   return profile;

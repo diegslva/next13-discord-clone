@@ -25,7 +25,7 @@ export const NavigationSidebar = async () => {
         }
       }
     },
-    cacheStrategy: { ttl: 60 }
+   
   });
 
   return (

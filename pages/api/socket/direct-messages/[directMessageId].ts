@@ -54,7 +54,7 @@ export default async function handler(
           }
         }
       },
-      cacheStrategy: { ttl: 60 }
+     
     })
 
     if (!conversation) {
@@ -79,7 +79,7 @@ export default async function handler(
           }
         }
       },
-      cacheStrategy: { ttl: 60 }
+      
     })
 
     if (!directMessage || directMessage.deleted) {

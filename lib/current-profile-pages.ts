@@ -14,7 +14,7 @@ export const currentProfilePages = async (req: NextApiRequest) => {
     where: {
       userId
     },
-    cacheStrategy: { ttl: 60 }
+   
   });
 
   return profile;

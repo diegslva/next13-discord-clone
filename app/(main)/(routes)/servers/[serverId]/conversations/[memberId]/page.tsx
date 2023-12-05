@@ -37,7 +37,7 @@ const MemberIdPage = async ({
     include: {
       profile: true,
     },
-    cacheStrategy: { ttl: 60 }
+   
   });
 
   if (!currentMember) {
